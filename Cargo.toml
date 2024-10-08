@@ -1,0 +1,17 @@
+[package]
+name = "much-oxide"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["client-example", "library_example", "server-example"]
+
+[workspace.dependencies]
+dropshot = { git = "https://github.com/oxidecomputer/dropshot.git" }
+rcgen = "0.13.1"
+reqwest = "0.12.8"
+schemars = "0.8.21"
+serde = { version = "1.0.210", features = ["derive"] }
+tempfile = "3.13.0"
+tokio = { version = "1.40.0", features = ["rt-multi-thread", "macros"] }
+tracing = "0.1.40"
